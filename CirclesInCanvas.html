@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circles In Canvas</title>
+</head>
+<style>
+    #canvas{
+        border: 2px black solid;
+    }
+</style>
+<body>
+    <Canvas id="canvas" width="600" height="600"></Canvas>
+
+    <script>
+
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+        context.strokeStyle ="#100aae"
+        context.fillStyle = "#068eae"
+        context.beginPath();
+
+        context.arc(100, 200, 50, 0, 2* Math.PI);
+
+        context.stroke();
+    </script>
+
+</body>
+</html>
