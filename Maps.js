@@ -13,7 +13,62 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 var bridgeIcon = L.icon({
     iconUrl : 'Pics/bridge.png',
-})
+    iconSize: [30,30]
+});
+
+var fallsIcon = L.icon({
+    iconUrl: 'pics/niagara.png',
+    iconSize: [30,30]
+});
+var canyonIcon = L.icon({
+    iconUrl: 'pics/grand-canyon.png',
+    iconSize: [30,30]
+});
+var mountIcon = L.icon({
+    iconUrl: 'pics/rushmore.png',
+    iconSize: [30,30]
+});
+
 
 let  verrazanoB = [	40.6066, -74.0447]
-let  verrazanoMarker = L.marker(verrazanoB),{icon:}.bindPopup("Verrazano-Narrow Bridge<br> Spam 1298.4 Meters"). addTo(map)
+let  verrazanoMarker = L.marker(verrazanoB,{icon:bridgeIcon}).bindPopup("Verrazano-Narrow Bridge<br> Spam 1298.4 Meters"). addTo(map)
+
+let  goldenB = [37.8199, -122.4783]
+let  goldenMarker = L.marker(goldenB,{icon:bridgeIcon}).bindPopup("Golden Gate Bridge<br> Spam 1280.2 Meters"). addTo(map)
+
+let  mackinacB = [45.8174, -84.7278]
+let  mackinacMarker = L.marker(mackinacB,{icon:bridgeIcon}).bindPopup("Mackinac Bridge<br> Spam 1158 Meters"). addTo(map)
+
+let  washingtonB = [40.8517, -73.9527]
+let  washingtonMarker = L.marker(washingtonB,{icon:bridgeIcon}).bindPopup("George Washington Bridge<br> Spam 1067 Meters"). addTo(map)
+
+let  tacomaB = [47.2690, -122.5517]
+let  tacomaMarker = L.marker(tacomaB,{icon:bridgeIcon}).bindPopup("Tacoma Narrows Bridge<br> Spam 853.44 Meters"). addTo(map)
+
+let waterfall = [43.0962,-79.0377]
+let fallsMarker = L.marker(waterfall,{icon:fallsIcon}).bindPopup("Niagara Falls").addTo(map)
+
+let canyon = [36.1070, -112.1130]
+let canyonMarker = L.marker(canyon,{icon:canyonIcon}).bindPopup("Grand Canyon").addTo(map)
+
+let mount = [43.8791, -103.4591]
+let mountMarker = L.marker(mount,{icon:mountIcon}).bindPopup("Mount Rushmore").addTo(map)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
