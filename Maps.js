@@ -1,6 +1,6 @@
-
+//ARRAY WITH LATITUDE AND LONGITUDE CORDINATES FOR THE SECTION WE WANT TO CHECK
 let USACoordinates = [37.6,-95.665]
-
+//"L"is from leaflets
 let map =L.map('usa-map').setView(USACoordinates, 4)
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -10,9 +10,9 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     maxZoom: 18,
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiY2FybDA1ODciLCJhIjoiY2pzMHByeDkzMDRsNDN5bzgwbnYxOHMwOSJ9.yyCmzIyxg4D62a1kYGBGRg'}).addTo(map)
-
+//this is to create the icons using images that I have stored in my picture folder, giving them a variable name and Icon size
 var bridgeIcon = L.icon({
-    iconUrl : 'Pics/bridge.png',
+    iconUrl : 'pics/bridge.png',
     iconSize: [30,30]
 });
 
@@ -29,7 +29,7 @@ var mountIcon = L.icon({
     iconSize: [30,30]
 });
 
-
+//this are the markers created
 let  verrazanoB = [	40.6066, -74.0447]
 let  verrazanoMarker = L.marker(verrazanoB,{icon:bridgeIcon}).bindPopup("Verrazano-Narrow Bridge<br> Spam 1298.4 Meters"). addTo(map)
 
@@ -54,7 +54,13 @@ let canyonMarker = L.marker(canyon,{icon:canyonIcon}).bindPopup("Grand Canyon").
 let mount = [43.8791, -103.4591]
 let mountMarker = L.marker(mount,{icon:mountIcon}).bindPopup("Mount Rushmore").addTo(map)
 
-
+//I crerated this avariable(marker) its a circle with a radious of 10000 color red with some opacity
+var circle = L.circle([42.8791, -102.4591], {
+    color: 'red',
+    fillColor:'#f03',
+    fillOpacity:0.5,
+    radius: 10000
+}).addTo(map);
 
 
 
